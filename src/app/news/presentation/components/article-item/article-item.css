@@ -1,0 +1,23 @@
+.article-card {
+  margin: 4px;
+}
+
+.actions-section {
+  padding-top: 10px;
+  display: flex;
+}
+
+.action-button {
+  font-size: large;
+}
+
+.default-spacer {
+  flex: 1 1 auto;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  margin-right: 10px;
+}

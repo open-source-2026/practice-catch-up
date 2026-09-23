@@ -1,0 +1,4 @@
+<mat-list-item (click)="emitSourceSelectedEvent()" class="source-row">
+  <img matListItemAvatar class="avatar" [alt]="source().name" [src]="source().urlToLogoAsString"/>
+  <p matListItemLine><span>{{ source().name }}</span></p>
+</mat-list-item>

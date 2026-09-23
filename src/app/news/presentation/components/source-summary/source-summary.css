@@ -1,0 +1,19 @@
+.source-summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.source-logo {
+  max-width: 128px;
+  max-height: 128px;
+  object-fit: contain;
+}
+
+.source-attribute {
+  margin-right: 16px;
+  display: inline-flex;
+  vertical-align: middle;
+}

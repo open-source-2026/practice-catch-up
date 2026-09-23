@@ -1,0 +1,20 @@
+<h2 mat-dialog-title>{{ source.name }}</h2>
+<mat-dialog-content>
+  <div class="source-summary-container">
+    <img [src]="source.urlToLogoAsString" [alt]="source.name" class="source-logo">
+    <p><b>{{ source.name }}</b></p>
+    <p>{{ source.description }}</p>
+    <p>
+      <span class="source-attribute"><mat-icon aria-hidden="false" [aria-label]="source.category" fontIcon="bookmark"/>
+        {{ source.category.toUpperCase() }}</span>
+      <span class="source-attribute"><mat-icon aria-hidden="false" [aria-label]="source.language" fontIcon="language"/>
+        {{ source.language.toUpperCase() }}</span>
+      <span class="source-attribute"><mat-icon aria-hidden="false" [aria-label]="source.country" fontIcon="place"/>
+        {{ source.country.toUpperCase() }}</span>
+    </p>
+  </div>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>{{ 'source.close' | translate }}</button>
+  <a mat-button [href]="source.urlAsString" target="_blank">{{ 'source.visit-website' | translate }}</a>
+</mat-dialog-actions>
