@@ -1,0 +1,38 @@
+<mat-card class="article-card">
+  <mat-card-header>
+    <img mat-card-avatar [alt]="article().source.name" [src]="article().source.urlToLogoAsString" class="avatar"/>
+    <mat-card-title>{{ article().source.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [alt]="article().title" [src]="article().urlToImageAsString"/>
+  <mat-card-header>
+    <mat-card-title>{{ article().title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      <b>
+        {{ 'article.by-author' | translate:{authorName: article().author} }}
+      </b>
+    </p>
+    <p>
+      <i>
+        {{ 'article.published-at' | translate }} {{ article().publishedAt.toString() | date:'medium' }}
+      </i>
+    </p>
+    <p> {{ article().description }}</p>
+  </mat-card-content>
+  <mat-card-actions class="actions-section">
+    <a [href]="article().urlAsString" class="action-button" color="primary"
+       mat-button
+       target="_blank">{{ 'article.read-more' | translate }}</a>
+    <span class="default-spacer"></span>
+    <button mat-button (click)="showSourceSummary()" class="action-button" aria-label="Source Summary">
+      {{ 'article.about-source'  | translate:{sourceName: article().source.name} }}
+    </button>
+    <button aria-label="Comments" color="white" mat-icon-button>
+      <mat-icon>comment</mat-icon>
+    </button>
+    <button (click)="shareArticle()" aria-label="Share Article" color="white" mat-icon-button>
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-card-actions>
+</mat-card>
